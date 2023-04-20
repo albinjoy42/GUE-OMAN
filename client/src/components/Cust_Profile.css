@@ -1,0 +1,41 @@
+table{
+    width:60%;
+    text-align: center;
+}
+tr{
+    height: 80px;
+}
+button{
+    width: 350px;
+}
+body{
+    background-image:url("/src/images/admin_bg1.jpg");
+    width:auto;
+    height:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+button{
+    width:250px;
+}
+label{
+    color:whitesmoke;
+}
+.datepicker{
+    width:417px;
+    border-radius:6px;
+    height:40px;
+    border: 0px;
+    padding: 20px;
+}
+.searchicon{
+    height:auto;
+    width:50px;
+    color: yellowgreen;
+}
+.searchbox{
+    width:200px;
+    height:38px;
+    border:0px;
+    border-radius: 5px;
+}
