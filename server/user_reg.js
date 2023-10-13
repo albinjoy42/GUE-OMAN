@@ -5,14 +5,16 @@ const cor=require('cors');
 app.use(cor());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(express.static('images'));
 const multer = require('multer')
+const path = require('path')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, 'images/')
+      cb(null, 'images')
     },
     filename: (req, file, cb) => {
-      cb(null, file.originalname)
+      cb(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname));
     },
   })
   const upload = multer({ storage: storage })
@@ -195,6 +197,7 @@ app.get('/displayproducts',(req,res)=>{
         if(err) throw err;
         if (result.length>0){
             res.json(result);
+            console.log(result);
         }
         else{
             res.send("productempty");
@@ -204,5 +207,5 @@ app.get('/displayproducts',(req,res)=>{
 //--------------------DISPLAY PRODUCTS FROM DATABASE ON CUSTOMER PROFILE PAGE--------END------------------------------------------
 
 app.listen(9000,()=>{
-    console.log("server running http://localhost:9000/")
+    console.log("server running http://localhost:3000/")
 })

@@ -59,11 +59,6 @@ import '/node_modules/bootstrap/dist/css/bootstrap.css'
             <span className="crt">Already have an account..? <a href="/Signinpage" className='crt'>Sign In!</a></span>
             </div>
             </div></div></center>
-            <div class="footer">
-  <p>Copyright @ 2023 by Albin & Tony. All Rights Reserved.
-GUE Oman is Powered by Camerinfolks  Pvt Ltd.
-  </p>
-</div>
         </>
     );
 }

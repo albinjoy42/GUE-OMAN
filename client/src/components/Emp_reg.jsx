@@ -108,6 +108,7 @@ function Emp_reg(){
         </div>
         <center>
             <button type="button" class="btn btn-warning" onClick={add_employee}>Submit</button>
+            <br></br><br></br><br></br>
         </center>
         </div>
         </>

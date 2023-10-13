@@ -18,11 +18,6 @@ function About(){
             </div>
             <div className='right'><img src={about2} className="aboutimg" alt="Certification"></img></div>
             </div></div></center>
-            <div class="footer">
-  <p>Copyright @ 2023 by Albin & Tony. All Rights Reserved.
-GUE Oman is Powered by Camerinfolks  Pvt Ltd.
-  </p>
-</div>
         </>
     );
 }

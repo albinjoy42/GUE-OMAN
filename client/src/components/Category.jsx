@@ -1,5 +1,6 @@
 import AXIOS from 'axios';
-import React, { useState } from 'react'
+import React from 'react';
+import {useState}  from 'react';
 import '/node_modules/bootstrap/dist/css/bootstrap.css'
 import '../components/Products.css'
 import { useNavigate } from 'react-router-dom';
@@ -7,8 +8,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 function Category(){
     const navigate=useNavigate();
-    const [catname,setCatname]=useState("");
-
+    const [catname,setCatname]=useState([]);
     function add_category(){
         AXIOS.post("http://localhost:9000/addcategory",{catname:catname}).then((response)=>{
         console.log(response.data);

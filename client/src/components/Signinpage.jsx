@@ -12,16 +12,16 @@ function Signin(){
     function loginact(){
     AXIOS.post("http://localhost:9000/login",{uname:uname,pwd:pwd}).then((response)=>{
       console.log(response.data.result);
-      if(response.data.result==1){
+      if(response.data.result===1){
         navigate("/Cust_Profile");
       }
-      else if(response.data.result==2){
+      else if(response.data.result===2){
         navigate("/Adm_Profile");
       }
-      else if(response.data.result==3){
+      else if(response.data.result===3){
         navigate("/Employee_Profile");
       }
-      else if(response.data.result==4){
+      else if(response.data.result===4){
         navigate("/Supplier_Profile");
       } 
       else
@@ -59,14 +59,9 @@ function Signin(){
             <button type="submit" className="signbtn" onClick={loginact}><b>Sign In</b></button><br></br>
             <div class="text-danger"> {errorMessage} </div>
             <span className="crt">Need an account..? <a href="/Signuppage" className='crt'>Sign Up!</a></span>
-            <span className="psw">Forgot <a href="" className='psw'>password?</a></span><br></br><br></br>
+            <span className="psw">Forgot <a href="/forgotpwd" className='psw'>password?</a></span><br></br><br></br>
             </div>
             </div></div></center>
-            <div className="footer">
-                <p>Copyright @ 2023 by Albin & Tony. All Rights Reserved.
-                   GUE Oman is Powered by Camerinfolks  Pvt Ltd.
-                </p>
-            </div>
         </>
     );
 }
